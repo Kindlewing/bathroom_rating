@@ -1,3 +1,5 @@
+import 'package:bathroom_rating/authenticate.dart';
+import 'package:bathroom_rating/catpuccin.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,25 +16,21 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme(
+            brightness: Brightness.dark,
+            primary: Catpuccin.mocha['Base']!,
+            onPrimary: Catpuccin.mocha['Red']!,
+            secondary: Catpuccin.mocha['Maroon']!,
+            onSecondary: Catpuccin.mocha['Blue']!,
+            error: Catpuccin.mocha['Maroon']!,
+            onError: Catpuccin.mocha['Text']!,
+            background: Catpuccin.mocha['Base']!,
+            onBackground: Catpuccin.mocha['Green']!,
+            surface: Catpuccin.mocha['Surface0']!,
+            onSurface: Catpuccin.mocha['Peach']!),
         useMaterial3: true,
       ),
-      home: const Home(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class Home extends StatelessWidget {
-  const Home({super.key, required title});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Home"),
-        backgroundColor: Theme.of(context).colorScheme.primary,
-      ),
-      body: const Text('Welcome home!'),
+      home: const Authenticate(),
     );
   }
 }
