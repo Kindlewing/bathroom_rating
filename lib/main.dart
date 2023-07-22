@@ -3,11 +3,11 @@ import 'package:bathroom_rating/catpuccin.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const BathroomReview());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class BathroomReview extends StatelessWidget {
+  const BathroomReview({super.key});
 
   // This widget is the root of your application.
   @override
@@ -18,13 +18,13 @@ class MyApp extends StatelessWidget {
         // This is the theme of your application.
         colorScheme: ColorScheme(
             brightness: Brightness.dark,
-            primary: Catpuccin.mocha['Base']!,
+            primary: Catpuccin.mocha['Mantle']!,
             onPrimary: Catpuccin.mocha['Red']!,
-            secondary: Catpuccin.mocha['Maroon']!,
+            secondary: Catpuccin.mocha['Base']!,
             onSecondary: Catpuccin.mocha['Blue']!,
             error: Catpuccin.mocha['Maroon']!,
             onError: Catpuccin.mocha['Text']!,
-            background: Catpuccin.mocha['Base']!,
+            background: Catpuccin.mocha['Mantle']!,
             onBackground: Catpuccin.mocha['Green']!,
             surface: Catpuccin.mocha['Surface0']!,
             onSurface: Catpuccin.mocha['Peach']!),
