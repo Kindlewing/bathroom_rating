@@ -1,5 +1,5 @@
 import 'package:bathroom_rating/authenticate.dart';
-import 'package:bathroom_rating/catpuccin.dart';
+import 'package:bathroom_rating/themes/catpuccin.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,14 +13,14 @@ class BathroomReview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Bathroom Rating',
       theme: ThemeData(
         // This is the theme of your application.
         colorScheme: ColorScheme(
             brightness: Brightness.dark,
-            primary: Catpuccin.mocha['Mantle']!,
+            primary: Catpuccin.mocha['Base']!,
             onPrimary: Catpuccin.mocha['Red']!,
-            secondary: Catpuccin.mocha['Base']!,
+            secondary: Catpuccin.mocha['Mantle']!,
             onSecondary: Catpuccin.mocha['Blue']!,
             error: Catpuccin.mocha['Maroon']!,
             onError: Catpuccin.mocha['Text']!,

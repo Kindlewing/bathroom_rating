@@ -1,4 +1,5 @@
 import 'package:bathroom_rating/user_text_input.dart';
+import 'package:bathroom_rating/home.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -17,6 +18,7 @@ class _Login extends State<Login> {
       appBar: AppBar(
         title: const Text("Login"),
         centerTitle: true,
+        backgroundColor: Theme.of(context).colorScheme.primary,
       ),
       backgroundColor: Theme.of(context).colorScheme.background,
       body: Form(
@@ -28,7 +30,7 @@ class _Login extends State<Login> {
           UserTextInput(
             textHint: "Email",
             obscured: false,
-            fillColor: Theme.of(context).colorScheme.secondary,
+            fillColor: Theme.of(context).colorScheme.surface,
             onChanged: (value) {
               setState(() {
                 _email = value;
@@ -40,13 +42,25 @@ class _Login extends State<Login> {
           ),
           UserTextInput(
               textHint: "Password",
-              fillColor: Theme.of(context).colorScheme.secondary,
+              fillColor: Theme.of(context).colorScheme.surface,
               obscured: true,
               onChanged: (value) {
                 setState(() {
                   _password = value;
                 });
               }),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => const Home()));
+            },
+            style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(
+                    Theme.of(context).colorScheme.onSecondary),
+                minimumSize: MaterialStateProperty.all(const Size(30, 40))),
+            child: const Text("Login"),
+          ),
         ]),
       ),
     );

@@ -26,8 +26,7 @@ class _UserTextInputState extends State<UserTextInput> {
           border: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(10))),
           filled: true,
-          fillColor:
-              widget.fillColor ?? Theme.of(context).colorScheme.secondary,
+          fillColor: widget.fillColor ?? Theme.of(context).colorScheme.surface,
         ),
         showCursor: true,
         cursorColor: Theme.of(context).colorScheme.secondary,
