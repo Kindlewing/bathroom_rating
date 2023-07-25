@@ -29,7 +29,7 @@ class _UserTextInputState extends State<UserTextInput> {
           fillColor: widget.fillColor ?? Theme.of(context).colorScheme.surface,
         ),
         showCursor: true,
-        cursorColor: Theme.of(context).colorScheme.secondary,
+        cursorColor: Theme.of(context).colorScheme.onPrimary,
         obscureText: widget.obscured,
         onChanged: widget.onChanged);
   }
