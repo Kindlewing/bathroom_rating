@@ -1,4 +1,4 @@
-import 'package:bathroom_rating/user_text_input.dart';
+import 'package:bathroom_rating/components/user_text_input.dart';
 import 'package:bathroom_rating/home.dart';
 import 'package:flutter/material.dart';
 

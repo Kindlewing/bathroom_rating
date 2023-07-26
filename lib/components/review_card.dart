@@ -1,3 +1,4 @@
+import 'package:bathroom_rating/components/bathroom_rating_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
@@ -8,10 +9,6 @@ class ReviewCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    _onRatingUpdate(rating) {
-      print(rating);
-    }
-
     return Card(
       elevation: 0,
       color: Theme.of(context).colorScheme.onPrimary,
@@ -27,14 +24,9 @@ class ReviewCard extends StatelessWidget {
                 backgroundColor: Colors.pink,
               ),
               title: const Text("Hudson"),
-              subtitle: RatingBar.builder(
-                itemBuilder: (context, _) =>
-                    const Icon(Icons.star, color: Colors.amber),
-                onRatingUpdate: (rating) {
-                  print(rating);
-                },
-                itemSize: 30,
-              ),
+              subtitle: BathroomRatingBar(onRatingUpdate: (rating) {
+                print(rating);
+              }),
             ),
           ])),
     );
