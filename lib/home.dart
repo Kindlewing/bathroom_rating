@@ -10,6 +10,7 @@ class Home extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Home"),
         ),
+        backgroundColor: Theme.of(context).colorScheme.tertiary,
         body: const ReviewCard());
   }
 }

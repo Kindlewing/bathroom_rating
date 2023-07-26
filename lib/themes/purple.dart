@@ -6,6 +6,7 @@ class PurpleSunset {
   static const Color deepLightPurple = Color(0xFF9F85A6);
   static const Color lightPurple = Color(0xFFD2B8D9);
   static const Color white = Color(0xFFF2F2F2);
+  static const Color grey = Color(0xFFE6ECF1);
 
   static const ColorScheme theme = ColorScheme(
       brightness: Brightness.dark,
@@ -13,6 +14,7 @@ class PurpleSunset {
       onPrimary: white,
       secondary: deepLightPurple,
       onSecondary: white,
+      tertiary: grey,
       error: deepDarkPurple,
       onError: white,
       background: darkPurple,

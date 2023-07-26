@@ -9,7 +9,7 @@ class ReviewCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
         elevation: 0,
-        color: Theme.of(context).colorScheme.onSurface.withOpacity(0.12),
+        color: Theme.of(context).colorScheme.onPrimary,
         shape: RoundedRectangleBorder(
             side: BorderSide(color: Theme.of(context).colorScheme.onSecondary),
             borderRadius: const BorderRadius.all(Radius.circular(16))),
