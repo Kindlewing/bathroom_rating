@@ -11,6 +11,6 @@ class Home extends StatelessWidget {
           title: const Text("Home"),
         ),
         backgroundColor: Theme.of(context).colorScheme.tertiary,
-        body: const ReviewCard());
+        body: ReviewCard());
   }
 }
