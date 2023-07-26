@@ -18,9 +18,7 @@ class _Login extends State<Login> {
       appBar: AppBar(
         title: const Text("Login"),
         centerTitle: true,
-        backgroundColor: Theme.of(context).colorScheme.primary,
       ),
-      backgroundColor: Theme.of(context).colorScheme.background,
       body: Form(
         key: _formKey,
         child: Column(children: <Widget>[
@@ -30,7 +28,7 @@ class _Login extends State<Login> {
           UserTextInput(
             textHint: "Email",
             obscured: false,
-            fillColor: Theme.of(context).colorScheme.surface,
+            fillColor: Theme.of(context).colorScheme.primary.withOpacity(0.50),
             onChanged: (value) {
               setState(() {
                 _email = value;
@@ -42,7 +40,8 @@ class _Login extends State<Login> {
           ),
           UserTextInput(
               textHint: "Password",
-              fillColor: Theme.of(context).colorScheme.surface,
+              fillColor:
+                  Theme.of(context).colorScheme.primary.withOpacity(0.50),
               obscured: true,
               onChanged: (value) {
                 setState(() {
@@ -56,9 +55,11 @@ class _Login extends State<Login> {
                   .push(MaterialPageRoute(builder: (context) => const Home()));
             },
             style: ButtonStyle(
+                foregroundColor: MaterialStateProperty.all(
+                    Theme.of(context).colorScheme.onSurface),
                 backgroundColor: MaterialStateProperty.all(
-                    Theme.of(context).colorScheme.onSecondary),
-                minimumSize: MaterialStateProperty.all(const Size(30, 40))),
+                    Theme.of(context).colorScheme.onBackground),
+                minimumSize: MaterialStateProperty.all(const Size(300, 50))),
             child: const Text("Login"),
           ),
         ]),

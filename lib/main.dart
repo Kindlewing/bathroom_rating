@@ -1,5 +1,5 @@
 import 'package:bathroom_rating/authenticate.dart';
-import 'package:bathroom_rating/themes/catpuccin.dart';
+import 'package:bathroom_rating/themes/purple.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,18 +16,9 @@ class BathroomReview extends StatelessWidget {
       title: 'Bathroom Rating',
       theme: ThemeData(
         // This is the theme of your application.
-        colorScheme: ColorScheme(
-            brightness: Brightness.dark,
-            primary: Catpuccin.mocha['Base']!,
-            onPrimary: Catpuccin.mocha['Red']!,
-            secondary: Catpuccin.mocha['Mantle']!,
-            onSecondary: Catpuccin.mocha['Blue']!,
-            error: Catpuccin.mocha['Maroon']!,
-            onError: Catpuccin.mocha['Text']!,
-            background: Catpuccin.mocha['Mantle']!,
-            onBackground: Catpuccin.mocha['Green']!,
-            surface: Catpuccin.mocha['Surface0']!,
-            onSurface: Catpuccin.mocha['Peach']!),
+        colorScheme: PurpleSunset.theme,
+        appBarTheme:
+            const AppBarTheme(backgroundColor: PurpleSunset.lightPurple),
         useMaterial3: true,
       ),
       home: const Authenticate(),

@@ -4,14 +4,14 @@ class UserTextInput extends StatefulWidget {
   final String textHint;
   final bool obscured;
   final void Function(String)? onChanged;
-  final Color? fillColor;
+  final Color fillColor;
 
   const UserTextInput(
       {super.key,
       required this.textHint,
       required this.obscured,
       required this.onChanged,
-      this.fillColor});
+      required this.fillColor});
 
   @override
   State<UserTextInput> createState() => _UserTextInputState();
@@ -26,7 +26,7 @@ class _UserTextInputState extends State<UserTextInput> {
           border: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(10))),
           filled: true,
-          fillColor: widget.fillColor ?? Theme.of(context).colorScheme.surface,
+          fillColor: widget.fillColor,
         ),
         showCursor: true,
         cursorColor: Theme.of(context).colorScheme.onPrimary,
